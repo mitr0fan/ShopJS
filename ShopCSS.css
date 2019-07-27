@@ -1,0 +1,497 @@
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: darkorange;
+    box-shadow: 0 0 10px;
+    z-index: 1;
+}
+#forHeader {
+    width: 900px;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+#forHeader>* {
+    display: inline-block;
+}
+#basket>* , #logo>* {
+    display: inline-block;
+}
+body {
+    margin: 0;
+}
+img[alt='Поиск'] {
+    height: 15px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+#basket>img {
+    height: 55px;
+    position: absolute;
+    right: 30px;
+}
+#basket:hover {
+    background-color: rgb(238, 131, 0);
+    cursor: pointer;
+}
+#search {
+    border: 1px solid;
+    border-radius: 20px;
+    width: 400px;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+}
+#logo{
+    height: 100%;
+    position: absolute;
+    left: 0px;
+}
+#logo>div {
+    position: absolute;
+    left: 80px;
+    top: 25px;
+}
+#basket {
+    height: 100%;
+    position: absolute;
+    width: 230px;
+    right: 0px;
+}
+#basket>div {
+    position: absolute;
+    top: 22px;
+    width: 160px;
+    left: 0px;
+}
+#quantity {
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    font-size: 9pt;
+    font-weight: 300;
+    bottom: 5px;
+    right: 20px;
+    text-align: center;
+    padding-top: 4px;
+}
+img[alt='Лого'] {
+    height: 55px;
+}
+#search>input {
+    border: none;
+    background-color: darkorange;
+    margin: 0;
+    height: 25px;
+    width: 370px;
+    font-family: sans-serif;
+    outline: none;
+    font-size: 12pt;
+}
+#main {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 70px;
+    overflow: hidden;
+    position: relative;
+}
+aside {
+    width: 250px;
+    padding-top: 10px;
+    display: flexbox;
+    float: left;
+    margin-right: 50px;
+    background-color: darkorange;
+    margin-top: 10px;
+}
+aside>* {
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.item {
+    padding: 10px;
+    height: 17px;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+aside input {
+    width: 75px;
+    margin: 10px;
+}
+.inputs {
+    display: block;
+    text-align: center;
+}
+#line {
+    border: solid 1px;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#point1, #point2 {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border: solid 1px;
+    border-radius: 12px;
+    background-color: darkorange;
+}
+#point2 {
+    right: -7px;
+    top: -7px;
+}
+#point1 {
+    top: -7px;
+    left: -7px;
+}
+.params>span {
+    float: right;
+}
+.checkBox {
+    border: solid 1px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.check {
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.check:hover {
+    text-decoration: underline;
+}
+.item:hover {
+    background-color:   rgba(255, 140, 0, 0.11);
+    cursor: pointer;
+}
+.photo {
+    width: 250px;
+    height: 140px;
+}
+.bicycle {
+    width: 260px;
+    display: inline-table;
+    height: 250px;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px 1px;
+    overflow: hidden;
+}
+.bicycle>.name {
+    font-weight: 600;
+}
+.addToBasket {
+    width: 40px;
+    position: absolute;
+    right: 0px;
+}
+.cost {
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+    height: 45px;
+}
+.cost>span {
+    position: absolute;
+    left: 1px;
+    top: 15px;
+}
+.cost:hover {
+    font-weight: 600;
+    cursor: pointer;
+    background: darkorange;
+    border-radius: 10px;
+}
+.bicycle:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px 1px darkorange;
+}
+.up {
+    transition: transform 0.3s;
+}
+#showBicycles {
+    position: absolute;
+    background-color: darkorange;
+    height: 30px;
+    width: 140px;
+    z-index: 1;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding-top: 15px;
+    transition: top 0.3s;
+}
+#showBicycles:hover {
+    cursor: pointer;
+}
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.863);
+    z-index: 10;
+}
+#forPopup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1000;
+}
+#popup {
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    border: solid 1px;
+    margin-top: 80px;
+    background: white;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#popup>img {
+    height: 300px;
+    width: 540px;
+}
+#spec {
+    margin: 0 auto;
+    text-align: center;
+}
+#close {
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 1;
+}
+#close>span {
+    position: fixed;
+}
+#close:hover {
+    cursor: pointer;
+    color: darkorange;
+}
+#name {
+    width: 500px;
+    font-weight: 600;
+    font-size: 15pt;
+    margin: 0 auto;
+}
+#previous {
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#previous>div {
+    height: 100%;
+    position: absolute;
+    top: 225px;
+    left: 25px;
+}
+#previous:hover {
+    cursor: pointer;
+}
+#previous img {
+    height: 50px;
+    position: fixed;
+}
+#next img {
+    height: 50px;
+    position: fixed;
+}
+#next {
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#next>div {
+    height: 100%;
+    position: absolute;
+    top: 225px;
+    right: 75px;
+}
+#next:hover {
+    cursor: pointer;
+}
+#popupPrice>img {
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+#popupPrice {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+}
+#price {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+}
+#popupPrice:hover {
+    cursor: pointer;
+    background: darkorange;
+    border-radius: 10px;
+}
+#basket1 {
+    position: absolute;
+}
+#goodsList {
+    width: 870px;
+    position: fixed;
+    top: 60px;
+    margin-right: 10px;
+    z-index: 1;
+    background: white;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 15pt;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 8px 1px;
+}
+#close1 {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+#close1:hover {
+    cursor: pointer;
+    color: darkorange;
+}
+#fullPrice {
+    position: absolute;
+    left: 620px;
+    bottom: 10px;
+}
+.elem {
+    height: 60px;
+}
+.elem:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+.elem>img {
+    height: 50px;
+    width: 90px;
+    position: absolute;
+    left: 20px;
+}
+.elem>*{
+    display: inline-block;
+}
+.nameList {
+    position: absolute;
+    left: 200px;
+    margin-top: 20px;
+}
+.amount {
+    margin-top: 20px;
+    position: absolute;
+    right: 200px;
+}
+.amount>* {
+    margin-left: 20px;
+}
+.amount:hover {
+    cursor: pointer;
+    color: darkorange;
+    font-weight: 600;
+}
+.priceList {
+    margin-top: 20px;
+    position: absolute;
+    right: 100px;
+}
+#buy {
+    position: absolute;
+    bottom: 10px;
+    left: 400px;
+}
+#clear {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+#clear:hover, #buy:hover {
+    cursor: pointer;
+    font-weight: 600;
+    color: darkorange;
+}
+#searchList {
+    position: absolute;
+    top: 42px;
+    left: 260px;
+    width: 380px;
+    background: white;
+    border: 1px solid darkorange;
+    transition: height 0.2s;
+}
+.searchImg {
+    height: 50px;
+    width: 90px;
+    position: absolute;
+    left: 0px;
+}
+.searchName {
+    position: absolute;
+    width: 300px;
+    left: 100px;
+    top: 20px;
+    text-align: left;
+}
+.divSearch {
+    position: relative;
+    height: 50px;
+    margin: 10px;
+    overflow: hidden;
+}
+.divSearch:hover {
+    cursor: pointer;
+    background: darkorange;
+}
+#zoom {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#zoom>img {
+    height: 600px;
+    width: 1080px;
+    position: absolute;
+}
+#zoom>img:hover {
+    cursor: none;
+}

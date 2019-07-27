@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="ShopCSS.css">
+    </head>
+    <body>
+        <div id="background" hidden></div>
+        <header>
+            <div id="forHeader">
+                <div id="logo"><img src="http://s1.iconbird.com/ico/2014/1/601/w512h5121390846971tricycle512.png" alt="Лого">
+                <div>Bicycle</div></div>
+                <div id="search">
+                    <input type="text"><img src="https://img.icons8.com/metro/420/search.png" alt="Поиск">
+                </div>
+                <div id="basket"><div>Корзина товаров </div><span id="quantity">0</span><img src="http://pngimg.com/uploads/shopping_cart/shopping_cart_PNG46.png"></div>
+                <div id="searchList" style="height: 0px"></div>
+            </div>
+        </header>
+        <div id="forPopup" hidden>
+            <div id="popup">
+                <span id="close"><span>✕</span></span>
+                <table id="spec">
+                    <tbody>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>Значение</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="previous"><div><img src="http://cliparts.co/cliparts/gTe/EqL/gTeEqL6Kc.png"></div></div>
+                <div id="next"><div><img src="http://cliparts.co/cliparts/gTe/EqL/gTeEqL6Kc.png" style="transform: rotate(180deg)"></div></div>
+                <div id="zoom" hidden><img></div>
+            </div>
+        </div>
+        <div id="main">
+            <aside>
+                <span style="padding-left: 10px">Фильтр по параметрам</span>
+                <div class="item sort">
+                    <div class="params">Сортировка <span style="font-weight: bold" class="up">⏷</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>По алфавиту</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>По цене - по возрастанию</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>По цене - по убыванию</span></div>
+                </div>
+                <div class="item brand">
+                    <div class="params">Бренд <span style="font-weight: bold" class="up">⏷</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>Forward</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>Format</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>Altair</span></div>
+                </div>
+                <div class="item price">
+                    <div class="params">Цена <span style="font-weight: bold" class="up">⏷</span></div>
+                     <div class="inputs"><input type="text" id="minPrice"> - <input type="text" id="maxPrice"></div>
+                     <div id="priceLine">
+                         <div id="line">
+                             <div id="point1"></div><div id="colorLine"></div><div id="point2"></div>
+                         </div>
+                     </div>
+                </div>
+                <div class="item modelYear">
+                    <div class="params">Модельный год <span style="font-weight: bold" class="up">⏷</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2019</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2018</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2017</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2016</span></div><br>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2015</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2014</span></div>
+                    <div class="check" data-active=""><div class="checkBox"></div><span>2013</span></div>
+                </div>
+                <div class="item gender">
+                     <div class="params">Пол <span style="font-weight: bold" class="up">⏷</span></div>
+                     <div class="check" data-active=""><div class="checkBox"></div><span>Мужской</span></div>
+                     <div class="check" data-active=""><div class="checkBox"></div><span>Женский</span></div>
+                     <div class="check" data-active=""><div class="checkBox"></div><span>Унисекс</span></div>
+                 </div>
+                 <div class="item age">
+                         <div class="params">Возрастная группа <span style="font-weight: bold" class="up">⏷</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Для взрослых</span></div><br>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Для подростков</span></div><br>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Для детей</span></div>
+                 </div>
+                 <div class="item material">
+                         <div class="params">Материал рамы <span style="font-weight: bold" class="up">⏷</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Алюминий</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Сталь</span></div>
+                 </div>
+                 <div class="item amortization">
+                         <div class="params">Амортизация <span style="font-weight: bold" class="up">⏷</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Жесткая вилка</span></div><br>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Передняя амортизационная вилка</span></div><br>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>Передняя амортизационная вилка и задний амортизатор</span></div>
+                 </div>
+                 <div class="item wheel">
+                         <div class="params">Размер колес <span style="font-weight: bold" class="up">⏷</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>12"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>14"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>16"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>18"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>20"</span></div><br>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>24"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>26"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>27.5"</span></div>
+                         <div class="check" data-active=""><div class="checkBox"></div><span>29"</span></div>
+                 </div>
+            </aside>
+            <span id="showBicycles" hidden>
+                Показать: 0
+            </span>
+            <div id="basket1" hidden>
+                <div id="goodsList">
+                    <span>Корзина товаров</span>
+                    <span id="close1"><span>✕</span></span>
+                    <span id="fullPrice">Стоимость: <span>0</span></span>
+                    <span id="buy">Купить</span>
+                    <span id="clear">Очистить корзину</span>
+                </div>
+            </div>
+        </div>
+        <script src="ShopJS.js" async></script>
+    </body>
+</html>
